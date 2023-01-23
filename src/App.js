@@ -8,9 +8,6 @@ const pokemonCtrl = new Pokemon();
 
 //Connection to DB
 /*const mongoose = require('mongoose');
-const user = 'pokecris200';
-const password = 'h5vRz2A1PXzGej33';
-const uri = 'mongodb+srv://pokecris200:h5vRz2A1PXzGej33@cluster0.1bffmnu.mongodb.net/Pokemon?retryWrites=true&w=majority';
 mongoose.connect('mongodb://127.0.0.1:27017/test');*/
 
 function App() {
@@ -18,7 +15,8 @@ function App() {
 
   useEffect(() => {
     (async () => {
-      const response = await pokemonCtrl.obtain();
+      const response = await fetch("https://pokeapi.co/api/v2/pokemon/1/");
+      const result = await response.json();
       console.log(response);
     })()
   }, [])
