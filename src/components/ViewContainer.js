@@ -1,6 +1,5 @@
 import React from 'react'
 import View from './View'
-import {Vtest} from './View.js'
 
 function test(variable) {
     
